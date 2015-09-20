@@ -1,0 +1,56 @@
+.TH foo 1 "10 May 2011" "version 0.2"
+
+.SH NAME
+btoa - a tiny binary file to assembly language converter.
+
+.SH SYNOPSIS
+.B btoa
+<lang> <binary file name> [<assembly file name>]
+
+.SH DESCRIPTION
+Convert data of some binary file to a correct source code in assembly
+language using data definition directives ("db" or ".byte").
+.PP
+List of mandatory arguments:
+.PP
+.B <lang>
+is a name of assembly language dialect. The first version of
+btoa supported two dialects "at" and "nasm", but due to its extensible
+nature it can support little bit more, to be sure you know all possible
+ones try to execute btoa without any arguments.
+.PP
+.B <binary file name>
+is a second argument necessary to specify. This is simply a name of input file
+to be converted.
+.PP
+The tool has also one optional argument:
+.PP
+.B <assembly file name>
+is an argument used to point the output file name. By default
+.B btoa
+prints the output to
+.B stdout.
+Usage of this unnecessary argument changes the behavior.
+.PP
+.B Exit codes
+.PP
+0    if OK,
+.PP
+1    if there is any problem.
+.SH AUTHOR
+The program has been written by Sergey V. Rogachev.
+
+.SH REPORTING BUGS
+To report about bugs try to write an email to RogachevSergei {at} gmail
+{dot} com with a topic "[BUG][btoa] <short name of the issue>.
+.PP
+The code of the tool is 4 years old and was published almost without changes,
+so, possibly it has a number of style issues, code duplication or even some
+bugs. Anyway it worked when it was necessary the correct way. Please, write an
+email only in critical situations when you cannot simply fix the code by
+yourself. The tool is one of the simplest applications and anybody can easily
+understand it in two-five
+minutes.
+
+.SH SEE ALSO
+.B as(1), fasm(1), nasm(1).
