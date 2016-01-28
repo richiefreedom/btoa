@@ -225,7 +225,7 @@ int main(int argc, char **argv)
 
 	fprintf(stderr, "Binary file to assembly language converter.\n\n");
 
-	if (argc < 3) {
+	if (argc < 3 || argc > 4) {
 		usage();
 		panic("At least two parameters are necessary.");
 	}
